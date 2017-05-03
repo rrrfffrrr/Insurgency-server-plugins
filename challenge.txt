@@ -1,0 +1,2 @@
+﻿This text will be shown when connect to server.
+You can change this text and reload with sm_challenge_reload func.

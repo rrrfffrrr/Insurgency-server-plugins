@@ -1,0 +1,2 @@
+﻿Every line will be shown randomly.
+You can change this text and reload with sm_announce_reload.
