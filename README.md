@@ -70,6 +70,7 @@ For maintenance.
 ## RespawnBots
 Respawn bots which isn't alive.  
 Optimized version of CheckpointRespawn.
+Default cvars not correct.
 
 #### Plugins
 [RespawnBots.smx](plugins/RespawnBots.smx)
@@ -94,6 +95,7 @@ Optimized version of CheckpointRespawn.
 Respawn bots which isn't alive.  
 It's prototype so having problem with performance.  
 Use RespawnBots instead.
+Default cvars not correct.
 
 #### Plugins
 [CheckpointRespawn.smx](plugins/CheckpointRespawn.smx)
