@@ -1,5 +1,5 @@
 # rrrfffrrr's insurgency plugins
-Plugin list:
+#### Plugin list
 * [Announcement](#Announcement)
 * [Challenge](#Challenge)
 * [AutoKick](#AutoKick)
