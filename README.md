@@ -10,7 +10,7 @@
 
 #### Why?
 [Jaredballou's plugins](https://github.com/jaredballou/insurgency-sourcemod) are don't work for my server.  
-So i made this with some codes with jaredballou's.
+So i made this with some codes from jaredballou's.
 
 ## Announcement
 Show a line that contain in [announcement.txt](announcement.txt).
