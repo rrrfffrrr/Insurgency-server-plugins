@@ -9,7 +9,7 @@
 * [SuicideBomber](#SuicideBomber)
 
 #### Why?
-[Jaredballou's plugins](https://github.com/jaredballou/insurgency-sourcemod) are don't work for my server.  
+[Jaredballou's plugins](https://github.com/jaredballou/insurgency-sourcemod) are don't work on my server.  
 So i made this with some codes from jaredballou's.
 
 ## Announcement
