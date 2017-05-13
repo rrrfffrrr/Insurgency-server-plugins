@@ -212,7 +212,7 @@ public Action:FDisplayPoint(Handle:timer) {
 	decl String:hint[MAXHINTSIZE];
 
 	if (i_display == 1) {
-		Format(hint, MAXHINTSIZE, "남은 Insurgent : %i", i_remainPoint + GetFakeClientCount());
+		Format(hint, MAXHINTSIZE, "남은 Insurgent : %i", ((i_remainPoint > 0) ? i_remainPoint : 0) + GetFakeClientCount());
 	}
 
 	for( new i = 1; i < MaxClients+1; i++) {
