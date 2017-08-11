@@ -24,7 +24,6 @@ Handle cvarTest = INVALID_HANDLE;
 
 // offsets
 int g_iStamina = -1;
-int g_iPlayerFlags = -1;
 int g_vAimPunch = -1;
 int g_vAimPunchVel = -1;
 
@@ -34,11 +33,6 @@ bool bPlayerLegInjured[MAXPLAYERS + 1];
 public void OnPluginStart() {
 	g_iStamina = FindSendPropInfo("CINSPlayer", "m_flStamina");
 	if (g_iStamina == -1) {
-		SetFailState("Fatal Error: Cannot find send prop.");
-	}
-
-	g_iPlayerFlags = FindSendPropInfo("CINSPlayer", "m_iPlayerFlags");
-	if (g_iPlayerFlags == -1) {
 		SetFailState("Fatal Error: Cannot find send prop.");
 	}
 
