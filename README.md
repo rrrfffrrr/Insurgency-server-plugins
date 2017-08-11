@@ -7,6 +7,7 @@
 * [CheckpointRespawn](#CheckpointRespawn)
 * [Medic](#Medic)
 * [SuicideBomber](#SuicideBomber)
+* [Injury](#injury)
 
 #### Why?
 [Jaredballou's plugins](https://github.com/jaredballou/insurgency-sourcemod) are don't work on my server.  
