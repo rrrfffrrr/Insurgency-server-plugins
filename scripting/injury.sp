@@ -20,7 +20,7 @@ public Plugin myinfo = {
         url             = PLUGIN_URL
 };
 
-Handle cvarTest = INVALID_HANDLE;
+Handle cvarStamina = INVALID_HANDLE;
 
 // offsets
 int g_iStamina = -1;
@@ -46,7 +46,7 @@ public void OnPluginStart() {
 		SetFailState("Fatal Error: Cannot find send prop.");
 	}
 
-	cvarTest = CreateConVar("sm_inj_stamina", "5.0", "test", FCVAR_NOTIFY);
+	cvarStamina = CreateConVar("sm_inj_stamina", "5.0", "test", FCVAR_NOTIFY);
 
 	HookEvent("weapon_fire", Event_Fire);
 	HookEvent("player_hurt", Event_Hurt);
@@ -59,8 +59,13 @@ public void OnClientPutInServer(int client) {
 
 public Action SDKHooks_OnPreThink(int client) {
 	if (IsValidPlayer(client) && IsPlayerAlive(client)) {
+		if (GetEntProp(client, Prop_Data, "m_iHealth", 2) > 95) {
+			bPlayerArmInjured[client] = false;
+			bPlayerLegInjured[client] = false;
+		}
+
 		if (bPlayerArmInjured[client] == true) {
-			SetEntDataFloat(client, g_iStamina, GetConVarFloat(cvarTest), true);
+			SetEntDataFloat(client, g_iStamina, GetConVarFloat(cvarStamina), true);
 		}
 
 		if (bPlayerLegInjured[client] == true) {
