@@ -159,5 +159,14 @@ Make a bot suicidebomber.
 "sm_suicide_delay"				"0.01"			// Wrong cvar... why i make this???? make sure this value is 1.
 ```
 
+## Injury
+Make injury effect.
+
+#### Plugins
+[injury.smx](plugins/injury.smx)
+
+#### Sources
+[injury.sp](scripting/injury.sp)
+
 ## By the way...
 Many plugins should be fixed but i'm too lazy...
