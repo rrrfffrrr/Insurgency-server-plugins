@@ -8,6 +8,7 @@
 * [Medic](#Medic)
 * [SuicideBomber](#SuicideBomber)
 * [Injury](#injury)
+* [RSWD](#RSWD)
 
 #### Why?
 [Jaredballou's plugins](https://github.com/jaredballou/insurgency-sourcemod) are don't work on my server.  
@@ -168,6 +169,15 @@ Make injury effect.
 
 #### Sources
 [injury.sp](scripting/injury.sp)
+
+## RSWD
+Reset supply token when die or spawn.
+
+#### Plugins
+[RSWD.smx](plugins/RSWD.smx)
+
+#### Sources
+[RSWD.sp](scripting/RSWD.sp)
 
 ## By the way...
 Many plugins should be fixed but i'm too lazy...
