@@ -170,7 +170,7 @@ public OneGameFrame() {
 				} else {
 					iSoulDetected[i] = 0;
 					for(j = 1; j < MaxClients + 1; j++) {
-						if (IsValidPlayer(j) && bPlayerJoined[j] == true && !IsPlayerAlive(j) && !IsFakeClient(i) && GetVectorDistance(vecFrom, DeadPosition[j]) <= fMaxDistance && i != j) {
+						if (IsValidPlayer(j) && bPlayerJoined[j] == true && !IsPlayerAlive(j) && !IsFakeClient(j) && GetVectorDistance(vecFrom, DeadPosition[j]) <= fMaxDistance && i != j) {
 							iSoulDetected[i] = j;
 							PrintCenterText(i, (iRevivePoint[i] > 0) ? "A soul detected..." : "A soul is detected but you can't do any thing...");
 							break;
