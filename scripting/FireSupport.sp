@@ -80,7 +80,7 @@ public void OnPluginStart() {
 	gCvarCountPerRound = CreateConVar("sm_firesupport_count", "1", "Count of available support per rounds(0 = disable)", FCVAR_PROTECTED, true, 0.0);
 	gCvarEnableCmd = CreateConVar("sm_firesupport_enable_cmd", "0", "Player can call fire support using sm_firesupport_call.", FCVAR_PROTECTED);
 	gCvarEnableWeapon = CreateConVar("sm_firesupport_enable_weapon", "1", "Player can call fire support using weapon.", FCVAR_PROTECTED);
-	gCvarWeapon = CreateConVar("sm_firesupport_weapon", "flare", "Weapon to call fire support.", FCVAR_PROTECTED);
+	gCvarWeapon = CreateConVar("sm_firesupport_weapon", "p2a1", "Weapon to call fire support.", FCVAR_PROTECTED);
 
 	RegConsoleCmd("sm_firesupport_call", CmdCallFS, "Call fire support where you looking at.", 0);
 	RegAdminCmd("sm_firesupport_ad_call", CmdCallAFS, 0);										// HINT: test command
