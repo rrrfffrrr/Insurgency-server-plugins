@@ -164,6 +164,13 @@
 				"library"	"server"
                                 "linux"         "@_ZN19CINSWeaponMagazines7AddMagsEi"
 			}
+			// static CINSWeaponRocketBase* CBaseRocketMissile::CreateRocketMissile(CBasePlayer *,char const*,Vector const&,QAngle const&)
+            "CBaseRocketMissile::CreateRocketMissile"
+        	{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x28\x53\x8B\x5D\x08"
+                "linux"		"@_ZN18CBaseRocketMissile19CreateRocketMissileEP11CBasePlayerPKcRK6VectorRK6QAngle"
+        	}
 		}
 	}
         "doi"
