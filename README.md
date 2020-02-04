@@ -190,12 +190,12 @@ NOT FOR CONTROL DEFAULT COUNTER ATTACKS.
 CATrigger is an example to use `CustomCounterAttack.smx`.
 
 #### Plugins
-[CustomCounterAttack.smx](plugins/CustomCounterAttack.smx)
+[CustomCounterAttack.smx](plugins/CustomCounterAttack.smx)  
 [CATrigger.smx](plugins/CATrigger.smx)
 
 #### Sources
-[CustomCounterAttack.sp](scripting/CustomCounterAttack.sp)
-[CATrigger.sp](scripting/CATrigger.sp)
+[CustomCounterAttack.sp](scripting/CustomCounterAttack.sp)  
+[CATrigger.sp](scripting/CATrigger.sp)  
 [counterattack.inc](scripting/include/counterattack.inc)
 
 #### Dependencies
