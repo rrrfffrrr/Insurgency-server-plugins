@@ -7,7 +7,7 @@ public Plugin myinfo = {
 	name		= "[INS] Fire support",
 	author		= "rrrfffrrr",
 	description	= "Fire support",
-	version		= "1.1.0",
+	version		= "1.1.1",
 	url			= ""
 };
 
@@ -181,19 +181,18 @@ public bool CallFireSupport(int client, float ground[3]) {									// HINT: Fire
 		sky[2] -= 20.0;
 
 		float time = gCvarDelay.FloatValue;
+		int shells = gCvarRound.IntValue;
 		DataPack pack = new DataPack();
 		pack.WriteCell(client);
+		pack.WriteCell(shells);
 		pack.WriteFloat(sky[0]);
 		pack.WriteFloat(sky[1]);
 		pack.WriteFloat(sky[2]);
 
 		ShowDelayEffect(ground, sky, time);
 
-		for(int i = 0; i < gCvarRound.IntValue; ++i) {
-			time = time + 0.05 + GetURandomFloat();
-			CreateTimer(time, Timer_LaunchMissile, pack, TIMER_FLAG_NO_MAPCHANGE);
-		}
-		CreateTimer(time + 0.1, Timer_DataPackExpire, pack, TIMER_FLAG_NO_MAPCHANGE | TIMER_DATA_HNDL_CLOSE);
+		CreateTimer(time + 0.05 + GetURandomFloat(), Timer_LaunchMissile, pack, TIMER_FLAG_NO_MAPCHANGE);
+		CreateTimer(time + 0.05 + 1.05 * shells, Timer_DataPackExpire, pack, TIMER_FLAG_NO_MAPCHANGE | TIMER_DATA_HNDL_CLOSE);
 		return true;
 	}
 
@@ -218,14 +217,24 @@ public Action Timer_LaunchMissile(Handle timer, DataPack pack) {
 	float dir = GetURandomFloat() * MATH_PI * 8.0;	// not 2π for good result
 	float length = GetURandomFloat() * gCvarMaxSpread.FloatValue;
 
-	float pos[3];
 	pack.Reset();
 	int client = pack.ReadCell();
+
+	DataPackPos cursor = pack.Position;
+	int shells = pack.ReadCell();
+	pack.Position = cursor;
+	pack.WriteCell(shells - 1);
+
+	float pos[3];
 	pos[0] = pack.ReadFloat() + Cosine(dir) * length;
 	pos[1] = pack.ReadFloat() + Sine(dir) * length;
 	pos[2] = pack.ReadFloat();
+
 	if (ValidateClient(client)) {
 		SDKCall(fCreateRocket, client, "rocket_rpg7", pos, DOWN_VECTOR);
+		if (shells > 1) {
+			CreateTimer(0.05 + GetURandomFloat(), Timer_LaunchMissile, pack, TIMER_FLAG_NO_MAPCHANGE);
+		}
 	}
 	return Plugin_Handled;
 }
