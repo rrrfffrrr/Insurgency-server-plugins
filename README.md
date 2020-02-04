@@ -9,6 +9,7 @@
 * [SuicideBomber](#SuicideBomber)
 * [Injury](#injury)
 * [RSWD](#RSWD)
+* [FireSupport](#FireSupport)
 * [CounterAttack](#CounterAttack)
 
 #### Why?
@@ -182,6 +183,37 @@ Reset supply token when die or spawn.
 
 ## By the way...
 Many plugins above this line should be fixed but i'm too lazy...
+
+## FireSupport
+Call artillery with command and weapon.
+
+#### Plugins
+[FireSupport.smx](plugins/FireSupport.smx)
+
+#### Sources
+[FireSupport.smx](scripting/FireSupport.sp)
+
+#### Dependencies
+[insurgency.games.txt](gamedata/insurgency.games.txt) 
+
+#### Cvars
+```
+"sm_firesupport_spread"			"800.0"							"Max spread."
+"sm_firesupport_shell_num"		"20.0"							"Shells to fire."
+"sm_firesupport_delay"			"10.0"							"Min delay to first shell."
+"sm_firesupport_delay_support"	"60.0"							"Min delay to next support."
+"sm_firesupport_class"			"template_recon_security_coop"	"Set fire support specialist class."
+"sm_firesupport_count"			"1"								"Count of available support per rounds(0 = disable)"
+"sm_firesupport_enable_cmd"		"0"								"Player can call fire support using sm_firesupport_call."
+"sm_firesupport_enable_weapon"	"1"								"Player can call fire support using weapon."
+"sm_firesupport_weapon"			"p2a1"							"Weapon to call fire support."
+```
+
+#### Cmds
+```
+"sm_firesupport_call"    "Call fire support where you looking at."
+"sm_firesupport_ad_call" "Call fire support without any restriction." ADMINCMD
+```
 
 ## CounterAttack
 CustomCounterAttack: Give some functions to control custom counter attack.  
