@@ -200,6 +200,7 @@ CATrigger is an example to use `CustomCounterAttack.smx`.
 
 #### Dependencies
 [insurgency.games.txt](gamedata/insurgency.games.txt)
+CATrigger use CustomCounterAttack
 
 #### Cvars
 ```
