@@ -119,24 +119,24 @@
 		}
 		"Signatures"
 		{
-                        "Spawn"
-                        {
+			"Spawn"
+			{
 				"library"	"server"
 				"windows"	"\x55\x8B\xEC\x83\xEC\x40\x53\x8B\xD9\x56\x80\xBB\xDE\x19\x00\x00\x00"
-                                "linux"         "@_ZN10CINSPlayer5SpawnEv"
-                        }
-                        "ForceRespawn"
-                        {
+				"linux"		"@_ZN10CINSPlayer5SpawnEv"
+			}
+			"ForceRespawn"
+			{
 				"library"	"server"
 				"windows"	"\x56\x8B\xF1\xE8\x2A\x2A\x2A\x2A\x84\xC0\x74\x2A\x8B\xCE\xE8\x2A\x2A\x2A\x2A\x85\xC0\x74\x2A\x8B\x10\x8B\xC8\x6A\x01"
-                                "linux"         "@_ZN10CINSPlayer12ForceRespawnEv"
-                        }
-                        "Resupply"
-                        {
+				"linux"		"@_ZN10CINSPlayer12ForceRespawnEv"
+			}
+			"Resupply"
+			{
 				"library"	"server"
 				"windows"	"\x55\x8b\xEC\x51\x56\x8B\xF1\x8B\x06\x8B\x2A\x2A\x2A\x2A\x2A\xFF\xD0\x84\xC0\x0F\x84\x2A\x2A\x2A\x2A\x80"
-                                "linux"         "@_ZN10CINSPlayer8ResupplyEv"
-                        }
+				"linux"		"@_ZN10CINSPlayer8ResupplyEv"
+			}
 			"RoundCount"
 			{
 				"library"	"server"
@@ -160,44 +160,52 @@
 				"linux"		"@_ZN10CINSPlayer12GetMagazinesEi"
 			}
 			"AddMags"
-                        {
+			{
 				"library"	"server"
-                                "linux"         "@_ZN19CINSWeaponMagazines7AddMagsEi"
+				"linux"		"@_ZN19CINSWeaponMagazines7AddMagsEi"
 			}
 			// static CINSWeaponRocketBase* CBaseRocketMissile::CreateRocketMissile(CBasePlayer *,char const*,Vector const&,QAngle const&)
-            "CBaseRocketMissile::CreateRocketMissile"
-        	{
+			"CBaseRocketMissile::CreateRocketMissile"
+			{
 				"library"	"server"
 				"windows"	"\x55\x8B\xEC\x83\xEC\x28\x53\x8B\x5D\x08"
-                "linux"		"@_ZN18CBaseRocketMissile19CreateRocketMissileEP11CBasePlayerPKcRK6VectorRK6QAngle"
-        	}
-		}
-	}
-        "doi"
-        {
-//23	22	CDOIPlayer::Spawn()
-//121	120	CBaseEntity::Respawn()
-//348	347	CINSPlayer::SharedSpawn()
-//349	348	CINSPlayer::ForceRespawn()
-//350	349	CBasePlayer::PostSpawnPointSelection()
-//351	350	CDOIPlayer::InitialSpawn()
-//476	475	CDOIPlayer::IsReadyToSpawn()
-//477	476	CINSPlayer::ShouldGainInstantSpawn()
-//478	477	CINSPlayer::ResetPerRoundStats()
-//479	478	CINSPlayer::ResetScores()
-
-		"Offsets"
-		{
-                        "Spawn"
-                        {
-				"linux"		"23"
-				"windows"	"22"
-                        }
-                        "ForceRespawn"
-                        {
-				"linux"		"349"
-				"windows"	"348"
-                        }
+				"linux"		"@_ZN18CBaseRocketMissile19CreateRocketMissileEP11CBasePlayerPKcRK6VectorRK6QAngle"
+			}
+			// ? CINSWeaponRocketBase::UpdateRocketBodygroup(void)
+			"CINSWeaponRocketBase::UpdateRocketBodygroup"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x51\x56\x57\x8B\xF9\x8D\x4D\xFC\x51\x8B\xCF\x8B\x07\xFF\x50\x1C\x8B\x37\x8B\xCF\xFF\x96\x04\x05\x00\x00\x50\x8B\xCF\xFF\x56\x60\x68\x2A\x2A\x2A\x2A\x8B\xCF\xE8\x2A\x2A\x2A\x2A\x8B\xF0\x83\xFE\xFF\x7E\x2A\x8B\x17\x8B\xCF\x8B\x92\x3C\x07\x00\x00"
+				"linux"		"@_ZN20CINSWeaponRocketBase21UpdateRocketBodygroupEv"
+			}
+			// _DWORD __cdecl CINSRules_Checkpoint::CounterWaveStarted(CINSRules_Checkpoint *this, int)
+			"CINSRules_Checkpoint::CounterWaveStarted"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x51\xA1\x2A\x2A\x2A\x2A\x53\x56\x57\xF3\x0F\x10\x40\x0C"
+				"linux"		"@_ZN20CINSRules_Checkpoint18CounterWaveStartedEi"
+			}
+			// _DWORD __cdecl CINSRules::ToggleBlockzone(CINSRules *this, int, bool)
+			"CINSRules::ToggleBlockzone"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x56\x8B\x75\x08\x57\x56\x68\x2A\x2A\x2A\x2A\x8B\xF9\xFF\x15\x2A\x2A\x2A\x2A"
+				"linux"		"@_ZN9CINSRules15ToggleBlockzoneEib"
+			}
+			// _DWORD __cdecl CINSRules::SetRoundTime(CINSRules *this, float)
+			"CINSRules::SetRoundTime"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x10\xA1\x2A\x2A\x2A\x2A\x56\x8B\xF1\xF3\x0F\x10\x48\x0C"
+				"linux"		"@_ZN9CINSRules12SetRoundTimeEf"
+			}
+			// _DWORD CINSRules::GetRoundRemainingTime(CINSRules *__hidden this)
+			"CINSRules::GetRoundRemainingTime"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x51\x80\xB9\xBC\x03\x00\x00\x00"
+				"linux"		"@_ZN9CINSRules21GetRoundRemainingTimeEv"
+			}
 		}
 	}
 }
