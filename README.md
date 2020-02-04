@@ -191,7 +191,7 @@ Call artillery with command and weapon.
 [FireSupport.smx](plugins/FireSupport.smx)
 
 #### Sources
-[FireSupport.smx](scripting/FireSupport.sp)
+[FireSupport.sp](scripting/FireSupport.sp)
 
 #### Dependencies
 [insurgency.games.txt](gamedata/insurgency.games.txt) 
