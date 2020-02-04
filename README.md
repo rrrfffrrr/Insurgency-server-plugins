@@ -9,6 +9,7 @@
 * [SuicideBomber](#SuicideBomber)
 * [Injury](#injury)
 * [RSWD](#RSWD)
+* [CounterAttack](#CounterAttack)
 
 #### Why?
 [Jaredballou's plugins](https://github.com/jaredballou/insurgency-sourcemod) are don't work on my server.  
@@ -180,4 +181,29 @@ Reset supply token when die or spawn.
 [RSWD.sp](scripting/RSWD.sp)
 
 ## By the way...
-Many plugins should be fixed but i'm too lazy...
+Many plugins above this line should be fixed but i'm too lazy...
+
+## CounterAttack
+CustomCounterAttack: Give some functions to control custom counter attack.
+CATrigger: Use native and forward function from CustomCounterAttack to trigger custom counter attack.
+NOT FOR CONTROL DEFAULT COUNTER ATTACKS.
+CATrigger is an example to use `CustomCounterAttack.smx`.
+
+#### Plugins
+[CustomCounterAttack.smx](plugins/CustomCounterAttack.smx)
+[CATrigger.smx](plugins/CATrigger.smx)
+
+#### Sources
+[CustomCounterAttack.sp](scripting/CustomCounterAttack.sp)
+[CATrigger.sp](scripting/CATrigger.sp)
+[counterattack.inc](scripting/include/counterattack.inc)
+
+#### Dependencies
+[insurgency.games.txt](gamedata/insurgency.games.txt)
+
+#### Cvars
+```
+"sm_counterattack_persist_time"			"1"				// Restore last remain round time when custom counter attack finished.
+"sm_catrigger_min"                  "6"       // Custom counter attack will be triggered in (100 / (1 + Max - Min)) %
+"sm_catrigger_max"                  "10"
+```
