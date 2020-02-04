@@ -184,9 +184,9 @@ Reset supply token when die or spawn.
 Many plugins above this line should be fixed but i'm too lazy...
 
 ## CounterAttack
-CustomCounterAttack: Give some functions to control custom counter attack.
-CATrigger: Use native and forward function from CustomCounterAttack to trigger custom counter attack.
-NOT FOR CONTROL DEFAULT COUNTER ATTACKS.
+CustomCounterAttack: Give some functions to control custom counter attack.  
+CATrigger: Use native and forward function from CustomCounterAttack to trigger custom counter attack.  
+NOT FOR CONTROL DEFAULT COUNTER ATTACKS.  
 CATrigger is an example to use `CustomCounterAttack.smx`.
 
 #### Plugins
