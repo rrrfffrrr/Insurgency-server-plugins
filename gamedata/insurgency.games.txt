@@ -4,26 +4,26 @@
 	{
 		"Offsets"
 		{
-            "CINSPlayer::ForceRespawn"
-            {
-                "linux"     "351"
-                "windows"   "350"
-            }
-            "CINSSpawnZone::GetBaseEntity"
-            {
-                "linux"     "6"
-                "windows"   "5"
-            }
-            "CINSSpawnZone::Enable"
-            {
-                "linux"     "199"
-                "windows"   "198"
-            }
-            "CINSSpawnZone::Disable"
-            {
-                "linux"     "200"
-                "windows"   "199"
-            }
+			"CINSPlayer::ForceRespawn"
+			{
+				"linux"		"351"
+				"windows"	"350"
+			}
+			"CINSSpawnZone::GetBaseEntity"
+			{
+				"linux"		"6"
+				"windows"	"5"
+			}
+			"CINSSpawnZone::Enable"
+			{
+				"linux"		"199"
+				"windows"	"198"
+			}
+			"CINSSpawnZone::Disable"
+			{
+				"linux"		"200"
+				"windows"	"199"
+			}
 		}
 		"Signatures"
 		{
@@ -114,38 +114,38 @@
 				"windows"	"\x55\x8B\xEC\x51\x80\xB9\xBC\x03\x00\x00\x00"
 				"linux"		"@_ZN9CINSRules21GetRoundRemainingTimeEv"
 			}
-            // void CBaseTrigger::PointIsWithin(Vector const&)
-            // sub_101D1E40
-            "CBaseTrigger::PointIsWithin"
-            {
-                "library"   "server"
-                "windows"   "\x53\x8B\xDC\x83\xEC\x08\x83\xE4\xF0\x83\xC4\x04\x55\x8B\x6B\x04\x89\x6C\x24\x04\x8B\xEC\x81\xEC\xAC\x00\x00\x00"
-                "linux"     "@_ZN12CBaseTrigger13PointIsWithinERK6Vector"
-            }
-            // static void CINSSpawnZone::PointInSpawnZone(Vector const&,CBaseEntity *,CINSSpawnZone**)
-            // sub_1020E230
-            "CINSSpawnZone::PointInSpawnZone"
-            {
-                "library"   "server"
-                "windows"   "\x55\x8B\xEC\x51\x8B\x45\x10\x85\xC0"
-                "linux"     "@_ZN13CINSSpawnZone16PointInSpawnZoneERK6VectorP11CBaseEntityPPS_"
-            }
-            // _DWORD __cdecl CINSRules::SetCurrentActiveSpawnZone(CINSRules *this, int team, int randomInt??)
-            // sub_10234080
-            "CINSRules::SetCurrentActiveSpawnZone"
-            {
-                "library"   "server"
-                "windows"   "\x55\x8B\xEC\x8B\x45\x08\x8B\x55\x0C\x89\x94\x81\x5C\x03\x00\x00"
-                "linux"     "@_ZN9CINSRules25SetCurrentActiveSpawnZoneEii"
-            }
-            // _DWORD __cdecl CINSRules::ToggleSpawnZone(CINSRules *this, __int16, bool)
-            // sub_102372E0
-            "CINSRules::ToggleSpawnZone"
-            {
-                "library"   "server"
-                "windows"   "\x55\x8B\xEC\x56\x8B\x75\x08\x0F\xB7\xD6"
-                "linux"     "@_ZN9CINSRules15ToggleSpawnZoneEib"
-            }
+			// void CBaseTrigger::PointIsWithin(Vector const&)
+			// sub_101D1E40
+			"CBaseTrigger::PointIsWithin"
+			{
+				"library"   "server"
+				"windows"   "\x53\x8B\xDC\x83\xEC\x08\x83\xE4\xF0\x83\xC4\x04\x55\x8B\x6B\x04\x89\x6C\x24\x04\x8B\xEC\x81\xEC\xAC\x00\x00\x00"
+				"linux"		"@_ZN12CBaseTrigger13PointIsWithinERK6Vector"
+			}
+			// static void CINSSpawnZone::PointInSpawnZone(Vector const&,CBaseEntity *,CINSSpawnZone**)
+			// sub_1020E230
+			"CINSSpawnZone::PointInSpawnZone"
+			{
+				"library"   "server"
+				"windows"   "\x55\x8B\xEC\x51\x8B\x45\x10\x85\xC0"
+				"linux"		"@_ZN13CINSSpawnZone16PointInSpawnZoneERK6VectorP11CBaseEntityPPS_"
+			}
+			// _DWORD __cdecl CINSRules::SetCurrentActiveSpawnZone(CINSRules *this, int team, int randomInt??)
+			// sub_10234080
+			"CINSRules::SetCurrentActiveSpawnZone"
+			{
+				"library"   "server"
+				"windows"   "\x55\x8B\xEC\x8B\x45\x08\x8B\x55\x0C\x89\x94\x81\x5C\x03\x00\x00"
+				"linux"		"@_ZN9CINSRules25SetCurrentActiveSpawnZoneEii"
+			}
+			// _DWORD __cdecl CINSRules::ToggleSpawnZone(CINSRules *this, __int16, bool)
+			// sub_102372E0
+			"CINSRules::ToggleSpawnZone"
+			{
+				"library"   "server"
+				"windows"   "\x55\x8B\xEC\x56\x8B\x75\x08\x0F\xB7\xD6"
+				"linux"		"@_ZN9CINSRules15ToggleSpawnZoneEib"
+			}
 		}
 	}
 }
