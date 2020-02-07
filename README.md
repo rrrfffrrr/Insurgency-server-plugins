@@ -8,9 +8,10 @@
 * [Medic](#Medic)
 * [SuicideBomber](#SuicideBomber)
 * [Injury](#injury)
-* [RSWD](#RSWD)
+* [RSWD](#RSWD)  
 * [FireSupport](#FireSupport)
 * [CounterAttack](#CounterAttack)
+* [RespawnBots2](#RespawnBots2)
 
 #### Why?
 [Jaredballou's plugins](https://github.com/jaredballou/insurgency-sourcemod) are don't work on my server.  
