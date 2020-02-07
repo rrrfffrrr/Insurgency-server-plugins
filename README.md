@@ -241,3 +241,38 @@ CATrigger use CustomCounterAttack
 "sm_catrigger_min"                  "6"       // Custom counter attack will be triggered in (100 / (1 + Max - Min)) %
 "sm_catrigger_max"                  "10"
 ```
+
+## RespawnBots2
+This is remake version of RespawnBots.  
+Bots will be respawn after some delay.  
+And they will be respawn infinitly when counter attack. (If enabled)  
+Plus, Bot will not be spawn where they can look player instantly. (If enabled)  
+
+#### Plugins
+[RespawnBots2.smx](plugins/RespawnBots2.smx)
+
+#### Sources
+[RespawnBots.sp](scripting/RespawnBots2.sp)
+
+#### Dependencies
+[insurgency.games.txt](gamedata/insurgency.games.txt)
+
+#### Cvars
+```
+"sm_botrespawn_delay"				""1"	""How many seconds wait before spawn for insurgent, 0 is disable delay"
+
+"sm_botrespawn_rp"					""5"	""Default bots count, 0 is infinity"
+"sm_botrespawn_rp_add"				""5"	""Number of bots that each player (rp + players * rp_add)"
+
+"sm_botrespawn_carp"				""5"	""Default bots count when counter attack"
+"sm_botrespawn_carp_add"			""5"	""Number of bots that each player when counter attack (carp + players * carp_add)"
+"sm_botrespawn_infinite_ca"			""1"	""Infinity spawn when counter attack"
+
+"sm_botrespawn_display"				""1"	""Display respawn point(0 = don't display, 1 = display)"
+"sm_botrespawn_display_delay"		""1"	""Display delay(sec)"
+
+"sm_botrespawn_count_alive"			""1"	""Count only alive players when counter attack."
+
+"sm_botrespawn_adjust"				""1"	""Adjust spawn location to where player can't see."
+"sm_botrespawn_adjust_distance"		""100"	""Adjust spawn location when someone close enough (Include teams)"
+```
