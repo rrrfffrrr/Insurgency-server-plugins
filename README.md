@@ -216,6 +216,7 @@ Call artillery with command and weapon.
 ```
 
 ## CounterAttack
+!!! HAS BUG !!!
 CustomCounterAttack: Give some functions to control custom counter attack.  
 CATrigger: Use native and forward function from CustomCounterAttack to trigger custom counter attack.  
 NOT FOR CONTROL DEFAULT COUNTER ATTACKS.  
