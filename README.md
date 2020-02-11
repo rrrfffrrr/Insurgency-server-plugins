@@ -248,7 +248,7 @@ This is remake version of RespawnBots.
 Bots will be respawn after some delay.  
 And they will be respawn infinitly when counter attack. (If enabled)  
 Plus, Bot will not be spawn where they can look player instantly. (If enabled)  
-MUST RELOAD MAP AFTER LOAD/RELOAD THIS PLUGINS. (Or spawnzone will be break for 1 round)
+MUST RELOAD MAP AFTER LOAD/RELOAD THIS PLUGINS. (Or spawnzone will be broken for 1 round)
 
 #### Plugins
 [RespawnBots2.smx](plugins/RespawnBots2.smx)
