@@ -32,6 +32,7 @@ ConVar CvarCooldown;
 
 ConVar CvarScoreWhenRevive;
 ConVar CvarTokenWhenRevive;
+ConVar CvarTokenWhenReviveCount;
 
 ConVar CvarSoulSize;
 ConVar CvarSoulColorR;
@@ -65,6 +66,7 @@ float vecDeadPosition[MAXPLAYERS + 1][3];
 
 Handle hMedicCooldown[MAXPLAYERS + 1];
 int iScore[MAXPLAYERS + 1];
+int iReviveCount[MAXPLAYERS + 1];
 
 public void OnPluginStart() {
 	InitSDKCalls();
@@ -92,6 +94,7 @@ public void OnMapStart() {
 		HideSprite(entSprite[i]);
 		hReviveTimer[i] = INVALID_HANDLE;
 		hMedicCooldown[i] = INVALID_HANDLE;
+		iReviveCount[i] = 0;
 	}
 
 	SDKHook(GetPlayerResourceEntity(), SDKHook_ThinkPost, OnPlayerResourceThinkPost);
@@ -149,6 +152,7 @@ void InitCvars() {
 
 	CvarScoreWhenRevive = CreateConVar("sm_medic_score", "50", "Get score when success to revive somone", FCVAR_NOTIFY, true, 0.0);
 	CvarTokenWhenRevive = CreateConVar("sm_medic_token", "0", "Get token when success to revive somone", FCVAR_NOTIFY, true, 0.0);
+	CvarTokenWhenReviveCount = CreateConVar("sm_medic_token_count", "10", "Number of revive count to recive token.", FCVAR_NOTIFY, true, 1.0);
 
 	CvarSoulSize = CreateConVar("sm_medic_soul_size", "1.0", "Size of soul to draw", FCVAR_NOTIFY);
 	CvarSoulColorR = CreateConVar("sm_medic_soul_color_r", "255", "Red color of soul to draw", FCVAR_NOTIFY, true, 0.0, true, 255.0);
@@ -324,9 +328,13 @@ void OnSpawn(int client) {
 
 void OnReviveSuccess(int client) {	// give reward here
 	iScore[client] += CvarScoreWhenRevive.IntValue;
-	int token = CvarTokenWhenRevive.IntValue;
-	if (token > 0)
-		AddToken(client, token);
+	iReviveCount[client]++;
+	if (iReviveCount[client] == CvarTokenWhenReviveCount.IntValue) {
+		int token = CvarTokenWhenRevive.IntValue;
+		if (token > 0)
+			AddToken(client, token);
+		iReviveCount[client] = 0;
+	}
 }
 
 void ResupplyToken(int client) {
