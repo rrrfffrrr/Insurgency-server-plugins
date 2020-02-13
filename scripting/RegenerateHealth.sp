@@ -9,7 +9,7 @@ public Plugin myinfo = {
 		name			= "[INS] Regenerate health",
 		author		  = "rrrfffrrr",
 		description	 = "Regenerate player health",
-		version		 = "1.0.0",
+		version		 = "1.0.1",
 		url			 = ""
 };
 
@@ -32,6 +32,12 @@ public void OnPluginStart() {
 
 	OnChangeLimit(ConVarRegenerationLimit, "", "80 20");
 	HookEvent("player_death", Event_PlayerDeath);
+}
+
+public void OnMapStart() {
+	for(int i = 0; i <= MaxClients; ++i) {
+		hPlayerRegenerationTimer[i] = INVALID_HANDLE;
+	}
 }
 
 public void OnClientPutInServer(int client) {
