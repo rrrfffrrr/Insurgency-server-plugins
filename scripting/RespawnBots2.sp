@@ -342,6 +342,7 @@ void FixSpawnPoint(int client) {
 	int team = GetClientTeam(client);
 	char key[4];
 	ArrayList list;
+	Format(key, sizeof(key), "%s%d", ((team == TEAM_SECURITY) ? "S" : "I"), cp);
 	if (hSpawnZone.GetValue(key, list)) {
 		for(int i = 0; i < list.Length; ++i) {
 			GetEntPropVector(list.Get(i), Prop_Send, "m_vecOrigin", pos);
