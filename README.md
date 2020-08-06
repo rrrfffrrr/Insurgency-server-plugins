@@ -1,4 +1,4 @@
-# rrrfffrrr's insurgency plugins
+# rrrfffrrr's insurgency plugins(EOL)
 #### Plugin list
 * [Announcement](#Announcement)
 * [Challenge](#Challenge)
